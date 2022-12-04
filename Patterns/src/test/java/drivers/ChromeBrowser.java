@@ -10,7 +10,7 @@ public class ChromeBrowser {
     public static WebDriver getDriver(String pageLoadStrategy) {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--incognito");
-        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--start-fullscreen");
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.valueOf(pageLoadStrategy.toUpperCase()));
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver(chromeOptions);
